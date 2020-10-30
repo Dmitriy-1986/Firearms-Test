@@ -1,0 +1,135 @@
+@font-face {
+    font-family: Danger;
+    src: url('../fonts/Danger.otf');
+    font-family: Cera_Stencil_PRO_Trial_Medium;
+    src: url('../fonts/Cera_Stencil_PRO_Trial_Medium.otf');
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    background: url('../images/abstract-3557682_960_720.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+}
+.text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    color: white;
+    margin-top: 150px;
+}
+@media (max-width:1022px) {
+    .text-box {
+        margin-top: 70px;
+    }
+}
+.text-box-list {
+    margin-left: 20px;
+    font-size: 1.5vw;
+    font-family: Cera_Stencil_PRO_Trial_Medium;
+}
+.text-box-list p {
+   transition: 500ms;
+}
+.text-box-list p:hover {
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF;
+}
+h1 {
+    font-family: Danger;
+    color: white;
+    font-size: 4vw;
+    text-align: center;
+    text-shadow: 0 1px 0px #378ab4, 1px 0 0px #5dabcd, 1px 2px 1px #378ab4, 2px 1px 1px #5dabcd, 2px 3px 2px #378ab4, 3px 2px 2px #5dabcd, 3px 4px 2px #378ab4, 4px 3px 3px #5dabcd, 4px 5px 3px #378ab4, 5px 4px 2px #5dabcd, 5px 6px 2px #378ab4, 6px 5px 2px #5dabcd, 6px 7px 1px #378ab4, 7px 6px 1px #5dabcd, 7px 8px 0px #378ab4, 8px 7px 0px #5dabcd;
+}
+h1 span:hover {
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 1px 2px 1px #378ab4, 2px 1px 1px #5dabcd, 2px 3px 2px #378ab4, 3px 2px 2px #5dabcd, 3px 4px 2px #378ab4, 4px 3px 3px #5dabcd, 4px 5px 3px #378ab4, 5px 4px 2px #5dabcd, 5px 6px 2px #378ab4, 6px 5px 2px #5dabcd, 6px 7px 1px #378ab4, 7px 6px 1px #5dabcd, 7px 8px 0px #378ab4, 8px 7px 0px #5dabcd;
+}
+.text-box-decor {
+    text-decoration: underline;
+}
+.photo-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-left: auto;
+    width: 60%;
+    margin-top: 150px;
+}
+@media (max-width:1022px) {
+    .photo-box {
+        margin-top: 70px;
+    }
+}
+img {
+    margin: 10px;
+    height: 300px;
+    transition: 500ms;
+    box-shadow: 0px 0px 39px 0px rgba(255,255,255);
+    z-index: 1;
+}
+img:hover {
+    transform: scale(2, 2);
+    z-index: 2;
+}
+
+@media (max-width:1022px) {
+    img {height: 250px;}
+    img:hover {
+        transform: scale(1.5, 1.5);
+    }
+}
+@keyframes animateArrow {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+.go-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+@media (max-width:1022px) {
+    .go-top {
+        margin-top: 50px;
+    }
+}
+.arrow-top {
+    width: 30px;
+    height: 20px;
+    fill: white;
+    transform: rotate(180deg);
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    height: 20px;
+    cursor: pointer;
+    animation-name: animateArrow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    font-family: Cera_Stencil_PRO_Trial_Medium;
+}
