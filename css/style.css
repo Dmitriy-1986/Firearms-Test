@@ -10,8 +10,8 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    background: url('../images/abstract-3557682_960_720.png');
-    background-size: cover;
+    background: url('../images/images.jfif');
+    /*background-size: cover;*/
     background-attachment: fixed;
     background-position: center;
 }
