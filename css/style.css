@@ -85,7 +85,7 @@ img:hover {
 @media (max-width:1022px) {
     img {height: 250px;}
     img:hover {
-        transform: scale(1.5, 1.5);
+        transform: none;
     }
 }
 @keyframes animateArrow {
