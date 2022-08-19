@@ -1,1 +1,1 @@
-https://dmitriy-1986.github.io/Test-Vogneva-Pidgotovka
+https://dmitriy-1986.github.io/Firearms-Test
