@@ -11,7 +11,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Вогнева підготовка</title>
- 
+
   <!-- CSS -->
   <style>
     * {
@@ -243,7 +243,8 @@
           <hr>
 
           <!-- Дванадцяте питання -->
-          <p class="question">12. До якої затримки при стрільбі призводить зношення бойового взводу курка або носика шептала
+          <p class="question">12. До якої затримки при стрільбі призводить зношення бойового взводу курка або носика
+            шептала
             пістолета Макарова? </p>
           <input type="radio" name="answer-12">Прихват (защемлення) гільзи затвором <br>
           <input type="radio" name="answer-12" value="correct">Автоматична стрільба <br>
@@ -254,7 +255,7 @@
 
           <!-- Висновок результатів тестування -->
           <p id="result"></p>
-        </div>      
+        </div>
 
         <!-- Кнопки -->
         <div class="block-btn">
@@ -268,6 +269,21 @@
 
   <!-- JavaScript -->
   <script>
+    const questionsObj = [
+      { answerName: 'answer-1',  answerMessage: 'message-1',  answerKey: 0 },
+      { answerName: 'answer-2',  answerMessage: 'message-2',  answerKey: 1 },
+      { answerName: 'answer-3',  answerMessage: 'message-3',  answerKey: 2 },
+      { answerName: 'answer-4',  answerMessage: 'message-4',  answerKey: 1 },
+      { answerName: 'answer-5',  answerMessage: 'message-5',  answerKey: 0 },
+      { answerName: 'answer-6',  answerMessage: 'message-6',  answerKey: 1 },
+      { answerName: 'answer-7',  answerMessage: 'message-7',  answerKey: 1 },
+      { answerName: 'answer-8',  answerMessage: 'message-8',  answerKey: 2 },
+      { answerName: 'answer-9',  answerMessage: 'message-9',  answerKey: 2 },
+      { answerName: 'answer-10', answerMessage: 'message-10', answerKey: 0 },
+      { answerName: 'answer-11', answerMessage: 'message-11', answerKey: 2 },
+      { answerName: 'answer-12', answerMessage: 'message-12', answerKey: 1 },
+    ];
+
     let btnVerify = document.querySelector('#btnVerify'),
       btnReset = document.querySelector('#btnReset'),
       amountCorrect = 0;
@@ -296,18 +312,9 @@
 
     function showQwestions() {
       /* Опрацювання відповідей на питання тесту */
-      questions('answer-1',  'message-1',  0);
-      questions('answer-2',  'message-2',  1);
-      questions('answer-3',  'message-3',  2);
-      questions('answer-4',  'message-4',  1);
-      questions('answer-5',  'message-5',  0);
-      questions('answer-6',  'message-6',  1);
-      questions('answer-7',  'message-7',  1);
-      questions('answer-8',  'message-8',  2);
-      questions('answer-9',  'message-9',  2);
-      questions('answer-10', 'message-10', 0);
-      questions('answer-11', 'message-11', 2);
-      questions('answer-12', 'message-12', 1);
+      for (let i = 0; i < questionsObj.length; i++) {
+        questions(questionsObj[i].answerName, questionsObj[i].answerMessage, questionsObj[i].answerKey);
+      }
 
       /* Виведення висновку результатів тесту */
       let result = document.getElementById('result');
